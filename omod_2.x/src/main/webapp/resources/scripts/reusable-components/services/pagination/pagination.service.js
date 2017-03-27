@@ -44,11 +44,11 @@
     }
 
     function pagingFrom(currentPage, limit) {
-      return currentPage <= 1 ? 1 : (currentPage - 1) * limit;
+      return currentPage <= 1 ? 1 : (currentPage - 1) * limit + 1;
     }
 
-    function paginateParams(start, limit, includeRetired, q) {
-      var startIndex = ((start - 1) * limit) + 1;
+    function paginateParams(page, limit, includeRetired, q) {
+      var startIndex = ((page - 1) * limit) + 1;
       var params;
 
       if (includeRetired === true || includeRetired === "true") {
@@ -87,9 +87,7 @@
 
         model = new PaginateModel(totalResults, pages, entities);
         onPaginateSuccess(model);
-      }, function(error) {
-        onPaginateError(error);
-      });
+      }, onPaginateError);
     }
   }
 })();

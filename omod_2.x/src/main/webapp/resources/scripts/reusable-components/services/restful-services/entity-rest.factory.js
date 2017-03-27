@@ -249,7 +249,6 @@
      * error handler
      */
     function commonErrorHandler(errorCallback, msg) {
-      var error = emr.errorMessage(msg);
       console.log('ERROR:::' + msg);
     }
   }
