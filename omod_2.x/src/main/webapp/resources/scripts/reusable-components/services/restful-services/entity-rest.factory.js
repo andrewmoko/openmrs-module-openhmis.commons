@@ -116,7 +116,7 @@
       if ("rest_entity_name" in baseParams) {
         rest_entity_name = baseParams['rest_entity_name'];
       } else {
-        var msg = 'openhmis.commons.general.error.restName'
+        var msg = 'openhmis.commons.general.error.restName';
         commonErrorHandler(errorCallback, msg);
       }
 
