@@ -11,6 +11,9 @@
     <packaging>jar</packaging>
     <name>OpenHMIS Commons Module OMOD_2.x</name>
     <description>OMOD project for the OpenHMIS Commons 2.x module</description>
+    <properties>
+        <jsWorkingDirectory>src/main/webapp/resources/scripts/reusable-components</jsWorkingDirectory>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -120,7 +123,48 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>1.4</version>
+                <configuration>
+                    <workingDirectory>${jsWorkingDirectory}</workingDirectory>
+                    <installDirectory>${jsWorkingDirectory}/node_modules</installDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>install node and npm</id>
+                        <goals>
+                            <goal>install-node-and-npm</goal>
+                        </goals>
+                        <configuration>
+                            <!-- See https://nodejs.org/en/download/ for latest node and npm (lts) versions -->
+                            <nodeVersion>v4.6.0</nodeVersion>
+                            <npmVersion>2.15.9</npmVersion>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>npm install</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <!-- npm install modules in package.json -->
+                        <configuration>
+                            <arguments>install</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <!-- run test -->
+                        <id>grunt tests</id>
+                        <goals>
+                            <goal>grunt</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>karma</arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-
 </project>

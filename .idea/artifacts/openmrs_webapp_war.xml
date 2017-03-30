@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="openmrs-webapp:war">
+    <output-path>$PROJECT_DIR$/../openmrs-core/webapp/target</output-path>
+    <root id="archive" name="openmrs.war">
+      <element id="artifact" artifact-name="openmrs-webapp:war exploded" />
+    </root>
+  </artifact>
+</component>

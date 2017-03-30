@@ -65,11 +65,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-karma');
+  grunt.loadNpmTasks('grunt-cli');
 
   // Default task(s).
-  /*grunt.registerTask('default', ['test']);
-
-  grunt.registerTask('test', ['jasmine']);*/
-  grunt.registerTask('test', ['karma']);
-
+  grunt.registerTask('default', ['karma', 'jshint']);
 };

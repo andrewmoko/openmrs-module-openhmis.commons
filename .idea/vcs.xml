@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../coreapps-fork/openmrs-module-coreapps" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../openmrs-core" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../openmrs-module-openhmis.cashier" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../openmrs-module-openhmis.inventory" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../openmrs-module-patient-list" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../openmrs-module-visit-tasks" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../openmrs-module-webservices.rest" vcs="Git" />
+  </component>
+</project>
