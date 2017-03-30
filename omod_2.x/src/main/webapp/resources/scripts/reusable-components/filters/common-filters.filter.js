@@ -22,7 +22,7 @@
    */
   angular.module('app.filters').filter('EmrFormat', function() {
     return function(input, args) {
-      var output = '';
+      var output;
       var count = 0;
       var pattern = /%s/g;
       output = input.replace(pattern, function() {
